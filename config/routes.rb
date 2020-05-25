@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  get 'ask', to: 'questions#ask'
+  # questions_controller: ask action -> "/"
+  root to: 'questions#ask'
+  get 'askme', to: 'questions#ask'
+  # questions_controller: answer action -> "/answer" view
   get 'answer', to: 'questions#answer'
 end

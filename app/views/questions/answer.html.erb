@@ -2,14 +2,23 @@
   <h1>Stupid Coaching</h1>
 
   <div class="card p-2 mb-2 mt-3">
-    <%= params[:question] %>
-    <em>- You</em>
+    <p><%= @question %></p>
+    <p><em>- You</em></p>
   </div>
 
   <div class="card yellow-bg p-2 mb-2">
-    <strong><%= @answer %></strong>
-    <em>- Your coach</em>
+    <p><strong><%= @answer %></strong></p>
+    <p><em>- Your coach</em></p>
   </div>
 
-  <%= link_to "Ask a new question", ask_path %>
+  <!-- direct to /askme -->
+  <%= link_to "Ask a new question", askme_path %>
 </div>
+
+
+
+<!-- Can use params here instead of instance variable -->
+<!--   <div class="card p-2 mb-2 mt-3">
+    <%= params[:question] %>
+    <em>- You</em>
+  </div> -->
